@@ -2,14 +2,20 @@
   "name": "jservices-front",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "rabbitr": "^8.4.0"
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "jbackbone": "github:tinnguyenhuuletrong/jbackbone",
+    "multer": "^1.2.0",
+    "pmx": "^0.6.4",
+    "socketio": "^1.0.0"
   },
   "repository": {
     "type": "git",
