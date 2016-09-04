@@ -9,6 +9,7 @@ var http = require('http'),
 var https = require('https');
 
 var Dispatcher = require('./lib/dispatcher.js')
+var SocketManager = require('./lib/socketmanager.js')
 
 var app = express();
 
@@ -101,11 +102,7 @@ if (_CONFIG.SOCKETIO_Enable) {
 	let server = require('http').createServer();
 	let io = require('socket.io')(server);
 	io.on('connection', function(socket) {
-
-		//Todo: Manage Connection
-		
-		//socket.on('event', function(data) {});
-		//socket.on('disconnect', function() {});
+		SocketManager.onConnection(socket)
 	});
 	server.listen(_CONFIG.SOCKETIO_PORT, function() {
 		console.log('[FrontAPI] SocketIO server listening on port ' + _CONFIG.SOCKETIO_PORT);
